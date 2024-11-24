@@ -1,0 +1,197 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.2);
+  background: var(--background-color);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100; /* Ensure it stacks above everything else */
+}
+
+/* Logo Styles */
+.nav-logo img{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo p {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none; /* Remove bullet points */
+}
+
+.nav-menu hr {
+  width: 80%;
+  height: 3px;
+  border: none;
+  border-radius: 5px; 
+  background: var(--primary-color);
+}
+
+.nav-menu li {
+  cursor: pointer; 
+}
+
+.nav-menu a {
+  text-decoration: none; 
+  color: #626262;
+}
+
+/* Login Button and Cart Styles */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.nav-login-btn {
+  border: 1px solid #626262;
+  border-radius: 50px;
+  padding: 8px 16px;
+  background: var(--background-color);
+  color: #626262;
+  cursor: pointer;
+}
+
+.nav-login-btn:hover {
+  background: var(--background-color); /* Light gray hover effect */
+}
+
+.nav-cart-count {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%; /* Circular badge */
+  background: var(--primary-color);
+  color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -4px; /* Position above the cart icon */
+  right: 0;
+}
+
+/* Toggle Icon for Mobile Screens */
+.nav-toggle-icon {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+}
+
+@media (max-width: 1280px) {
+  .nav-logo p {
+    font-size: 1.5rem; /* Slightly smaller logo text */
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .nav-login-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px; /* Smaller padding for button */
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-toggle-icon {
+    display: block; /* Show toggle icon */
+    order: 1; /* Place on the left */
+  }
+
+  .nav-logo {
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the logo */
+    order: 2;
+    margin-left: 35px;
+  }
+
+  .nav-actions {
+    gap: 15px;
+    order: 3; /* Place on the right */
+  }
+
+  .nav-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); /* Centered menu */
+    background: var(--background-color);
+    width: 100%;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+
+  .nav-menu a {
+    margin-left: 45%;
+  }
+
+  .nav-menu.nav-menu-visible {
+    display: flex; /* Show the menu when toggled */
+  }
+
+  .nav-menu hr {
+    margin-left: 45%;
+    width: 4%; 
+    height: 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 8px 12px; 
+  }
+  .nav-logo{
+    margin-left: 30px;
+    width: 30%;
+  }
+  .nav-menu {
+    width: 100%; 
+    margin-top: 8px;
+  }
+
+  .nav-menu a {
+    margin-left: 40%; /* Adjust alignment */
+  }
+
+  .nav-login-btn {
+    font-size: 0.7rem;
+    padding: 5px 10px; 
+  }
+
+  .nav-cart-count {
+    width: 14px;
+    height: 14px;
+    font-size: 0.7rem; 
+  }
+
+  .nav-menu hr {
+    margin-left: 42%;
+    width: 4%; 
+    height: 2px;
+  }
+}

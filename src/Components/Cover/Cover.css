@@ -1,0 +1,156 @@
+
+.cover {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #e1efff 0%, #e1ffea22 60%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+.cover-left {
+    flex: 1; /* Take equal space as the right section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; 
+    padding-left: 100px; 
+}
+
+.cover-left h2 {
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cover-left p {
+    color: var(--text-color);
+    font-size: 64px; 
+    font-weight: 700;
+    margin: 0;
+}
+
+.cover-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+    height: 60px;
+    border-radius: 50px; 
+    margin-top: 20px;
+    background: var(--primary-color);
+    color: var(--background-color);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cover-latest-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px); 
+}
+
+.cover-right {
+    flex: 1; /* Take equal space as the left section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-right img {
+    max-width: 150%; 
+    height: 250%;
+}
+
+@media (max-width: 1024px) {
+    .cover {
+        height: auto; 
+        padding-top: 40px; 
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    .cover-left {
+        padding-left: 50px; 
+    }
+
+    .cover-left h2 {
+        font-size: 28px; 
+    }
+
+    .cover-left p {
+        font-size: 48px; 
+    }
+
+    .cover-latest-btn {
+        width: 220px;
+        height: 50px;
+        font-size: 16px; 
+    }
+
+    .cover-right img {
+        width: 70%; 
+    }
+}
+
+@media (max-width: 800px) {
+    .cover {
+        height: auto; 
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    .cover-left {
+        padding-left: 20px; 
+        gap: 15px;
+    }
+
+    .cover-left h2 {
+        font-size: 24px;
+    }
+
+    .cover-left p {
+        font-size: 40px; 
+    }
+
+    .cover-latest-btn {
+        width: 200px;
+        height: 45px;
+        font-size: 14px; 
+    }
+
+    .cover-right img {
+        width: 70%; 
+    }
+}
+
+@media (max-width: 500px) {
+    .cover {
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center;
+        text-align: center; 
+        height: 60vh; 
+    }
+
+    .cover-left h2 {
+        font-size: 20px; 
+    }
+
+    .cover-left p {
+        font-size: 28px; 
+    }
+    .cover-latest-btn {
+        width: 70px;
+        height: 50px;
+        margin-left: 75px;
+    }
+    .cover-latest-btn div{
+       display: none; 
+    }
+    .cover-right {
+        display: none; /* Hide the image for better focus on text */
+    }
+}
