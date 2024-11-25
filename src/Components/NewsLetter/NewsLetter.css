@@ -170,3 +170,9 @@
     }
   }
   
+  @media (max-width: 500px) {
+    .newsletter {
+      width: 90%;
+    }
+  }
+  
